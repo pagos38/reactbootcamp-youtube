@@ -1,9 +1,11 @@
 import { Outlet } from "react-router-dom";
 
+import { DashboardHeader } from "../../templates/DashBoardHeader";
+
 export const HomeLayout = () => {
     return (
         <div>
-            <h1>DashBoard</h1>
+            <DashboardHeader />
             <Outlet />
         </div>
     );

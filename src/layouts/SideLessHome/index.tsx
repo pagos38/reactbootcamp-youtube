@@ -1,9 +1,11 @@
 import { Outlet } from "react-router-dom";
 
+import { DashboardHeader } from "../../templates/DashBoardHeader";
+
 export const SideLessHomeLayout = () => {
     return (
         <div>
-            <h1>Dashboard</h1>
+            <DashboardHeader />
             <Outlet />
         </div>
     );
