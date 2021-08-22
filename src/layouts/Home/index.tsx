@@ -1,10 +1,22 @@
 import { Outlet } from "react-router-dom";
 
+import { DashboardHeader } from "../../templates/DashBoardHeader";
+
+import { Sidebar } from "../../templates/Sidebar";
+
+import useStyles from "./style";
+
 export const HomeLayout = () => {
+    const styles = useStyles();
     return (
-        <div>
-            <h1>DashBoard</h1>
-            <Outlet />
+        <div className={styles.root}>
+            <DashboardHeader />
+            <div className={styles.sidebar}>
+                <Sidebar />
+            </div>
+            <div className={styles.main}>
+                <Outlet />
+            </div>
         </div>
     );
 };
